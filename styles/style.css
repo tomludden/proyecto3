@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --dark-background-color: #333;
+  --header-background-colour: #e4d5d5;
+  --div-background-color: #fff;
+  --input-color: #04070a;
+  --text-color: #333;
+  --button-color: #5f7af1;
+  --search-button-hover: #4a52e9;
+  --button-border-color: #000002;
+}
 * {
   box-sizing: border-box;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
-  color: #333;
+  color: var(--text-color);
   text-decoration: none;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .dark-mode {
-  background-color: #333;
+  background-color: var(--dark-background-color);
 }
 
 [data-theme='dark'] div.card:hover {
@@ -24,7 +35,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #e4d5d5;
+  background-color: var(--header-background-colour);
   padding: 0px 20px;
 }
 #header-logo {
@@ -53,14 +64,14 @@
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #5f7af1;
+  background-color: var(--button-color);
   color: #eaedf0;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 #login-btn:hover {
-  border-color: #000002;
+  border-color: var(--button-border-color);
 }
 
 #toggle-btn {
@@ -70,14 +81,15 @@
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #5f7af1;
+  background-color: var(--button-color);
+
   color: #eaedf0;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 #toggle-btn:hover {
-  border-color: #000002;
+  border-color: var(--button-border-color);
 }
 body {
   margin: 0;
@@ -150,7 +162,7 @@ div.card {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  background-color: #fff;
+  background-color: var(--div-background-color);
   border: solid 0.5px #213547;
   border-radius: 15px;
   text-align: center;
@@ -233,7 +245,7 @@ div.user-info img:hover {
   transition: border-color 0.25s;
 }
 #search-btn:hover {
-  background-color: #4a52e9;
+  background-color: var(--search-button-hover);
 }
 
 button:focus,
@@ -275,6 +287,7 @@ button:focus-visible {
   }
   #header-logo {
     display: flex;
+
     justify-content: center;
     align-items: center;
     padding-bottom: 15px;
